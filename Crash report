@@ -1,0 +1,204 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 8/20/19 11:07 AM
+Description: Feature placement
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Random.java:388) ~[?:1.8.0_51] {}
+	at xiroc.dungeoncrawl.dungeon.monster.RandomEquipment.applyDamage(RandomEquipment.java:136) ~[?:1.3.0] {}
+	at xiroc.dungeoncrawl.dungeon.monster.RandomEquipment.lambda$static$1(RandomEquipment.java:68) ~[?:1.3.0] {}
+	at xiroc.dungeoncrawl.dungeon.monster.RandomEquipment$$Lambda$5020/295891333.roll(Unknown Source) ~[?:?] {}
+	at xiroc.dungeoncrawl.dungeon.monster.RandomEquipment.getMeleeWeapon(RandomEquipment.java:191) ~[?:1.3.0] {}
+	at xiroc.dungeoncrawl.part.block.Spawner.setupBlock(Spawner.java:57) ~[?:1.3.0] {}
+	at xiroc.dungeoncrawl.dungeon.DungeonPieces$DungeonPiece.setBlockState(DungeonPieces.java:828) ~[?:1.3.0] {}
+	at xiroc.dungeoncrawl.dungeon.DungeonPieces$DungeonPiece.buildRotated(DungeonPieces.java:875) ~[?:1.3.0] {}
+	at xiroc.dungeoncrawl.dungeon.DungeonPieces$Corridor.func_74875_a(DungeonPieces.java:472) ~[?:1.3.0] {}
+	at net.minecraft.world.gen.feature.structure.StructureStart.func_75068_a(StructureStart.java:62) ~[?:?] {}
+	at xiroc.dungeoncrawl.dungeon.Dungeon$Start.func_75068_a(Dungeon.java:131) ~[?:1.3.0] {}
+	at net.minecraft.world.gen.feature.structure.Structure.func_212245_a(SourceFile:69) ~[?:?] {}
+	at net.minecraft.world.gen.feature.ConfiguredFeature.func_222734_a(SourceFile:36) ~[?:?] {}
+	at net.minecraft.world.gen.placement.Placement.lambda$place$0(Placement.java:72) ~[?:?] {}
+	at net.minecraft.world.gen.placement.Placement$$Lambda$3942/1899594428.accept(Unknown Source) ~[?:?] {}
+	at java.util.stream.Streams$StreamBuilderImpl.forEachRemaining(Streams.java:419) ~[?:1.8.0_51] {}
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580) ~[?:1.8.0_51] {}
+	at net.minecraft.world.gen.placement.Placement.func_214998_a(Placement.java:71) ~[?:?] {}
+	at net.minecraft.world.gen.placement.ConfiguredPlacement.func_215093_a(SourceFile:35) ~[?:?] {}
+	at net.minecraft.world.gen.feature.DecoratedFeature.func_212245_a(SourceFile:20) ~[?:?] {}
+	at net.minecraft.world.gen.feature.DecoratedFeature.func_212245_a(SourceFile:13) ~[?:?] {}
+	at net.minecraft.world.gen.feature.ConfiguredFeature.func_222734_a(SourceFile:36) ~[?:?] {}
+	at net.minecraft.world.biome.Biome.func_203608_a(Biome.java:283) ~[?:?] {pl:accesstransformer:B}
+	at net.minecraft.world.gen.ChunkGenerator.func_202092_b(SourceFile:130) ~[?:?] {}
+	at net.minecraft.world.chunk.ChunkStatus.lambda$static$9(ChunkStatus.java:73) ~[?:?] {pl:accesstransformer:B}
+	at net.minecraft.world.chunk.ChunkStatus$$Lambda$1516/749524318.doWork(Unknown Source) ~[?:?] {}
+	at net.minecraft.world.chunk.ChunkStatus.func_223198_a(ChunkStatus.java:196) ~[?:?] {pl:accesstransformer:B}
+	at net.minecraft.world.server.ChunkManager.lambda$null$17(ChunkManager.java:509) ~[?:?] {}
+	at net.minecraft.world.server.ChunkManager$$Lambda$3926/931415422.apply(Unknown Source) ~[?:?] {}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-2.0.24.jar:?] {}
+	at net.minecraft.world.server.ChunkManager.lambda$func_223156_b$19(ChunkManager.java:507) ~[?:?] {}
+	at net.minecraft.world.server.ChunkManager$$Lambda$3911/1651397543.apply(Unknown Source) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture.uniCompose(CompletableFuture.java:952) ~[?:1.8.0_51] {}
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:926) ~[?:1.8.0_51] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442) ~[?:1.8.0_51] {}
+	at net.minecraft.world.chunk.ChunkTaskPriorityQueueSorter.func_219083_b(SourceFile:58) ~[?:?] {}
+	at net.minecraft.world.chunk.ChunkTaskPriorityQueueSorter$$Lambda$3924/96207254.run(Unknown Source) ~[?:?] {}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.func_213148_e(SourceFile:83) ~[?:?] {}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.func_213145_a(SourceFile:123) ~[?:?] {}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.run(SourceFile:91) ~[?:?] {}
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1689) ~[?:1.8.0_51] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) ~[?:1.8.0_51] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at java.util.Random.nextInt(Random.java:388)
+	at xiroc.dungeoncrawl.dungeon.monster.RandomEquipment.applyDamage(RandomEquipment.java:136)
+	at xiroc.dungeoncrawl.dungeon.monster.RandomEquipment.lambda$static$1(RandomEquipment.java:68)
+	at xiroc.dungeoncrawl.dungeon.monster.RandomEquipment$$Lambda$5020/295891333.roll(Unknown Source)
+	at xiroc.dungeoncrawl.dungeon.monster.RandomEquipment.getMeleeWeapon(RandomEquipment.java:191)
+	at xiroc.dungeoncrawl.part.block.Spawner.setupBlock(Spawner.java:57)
+	at xiroc.dungeoncrawl.dungeon.DungeonPieces$DungeonPiece.setBlockState(DungeonPieces.java:828)
+	at xiroc.dungeoncrawl.dungeon.DungeonPieces$DungeonPiece.buildRotated(DungeonPieces.java:875)
+	at xiroc.dungeoncrawl.dungeon.DungeonPieces$Corridor.func_74875_a(DungeonPieces.java:472)
+	at net.minecraft.world.gen.feature.structure.StructureStart.func_75068_a(StructureStart.java:62)
+	at xiroc.dungeoncrawl.dungeon.Dungeon$Start.func_75068_a(Dungeon.java:131)
+	at net.minecraft.world.gen.feature.structure.Structure.func_212245_a(SourceFile:69)
+	at net.minecraft.world.gen.feature.ConfiguredFeature.func_222734_a(SourceFile:36)
+	at net.minecraft.world.gen.placement.Placement.lambda$place$0(Placement.java:72)
+	at net.minecraft.world.gen.placement.Placement$$Lambda$3942/1899594428.accept(Unknown Source)
+	at java.util.stream.Streams$StreamBuilderImpl.forEachRemaining(Streams.java:419)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at net.minecraft.world.gen.placement.Placement.func_214998_a(Placement.java:71)
+	at net.minecraft.world.gen.placement.ConfiguredPlacement.func_215093_a(SourceFile:35)
+	at net.minecraft.world.gen.feature.DecoratedFeature.func_212245_a(SourceFile:20)
+	at net.minecraft.world.gen.feature.DecoratedFeature.func_212245_a(SourceFile:13)
+	at net.minecraft.world.gen.feature.ConfiguredFeature.func_222734_a(SourceFile:36)
+
+-- Feature --
+Details:
+	Id: minecraft:decorated
+	Description: < DecoratedFeature [minecraft:decorated] >
+Stacktrace:
+	at net.minecraft.world.biome.Biome.func_203608_a(Biome.java:283)
+
+-- Generation --
+Details:
+	CenterX: 8
+	CenterZ: -42
+	Step: UNDERGROUND_STRUCTURES
+	Seed: 2250379455908925029
+	Biome: minecraft:sunflower_plains
+Stacktrace:
+	at net.minecraft.world.gen.ChunkGenerator.func_202092_b(SourceFile:130)
+	at net.minecraft.world.chunk.ChunkStatus.lambda$static$9(ChunkStatus.java:73)
+	at net.minecraft.world.chunk.ChunkStatus$$Lambda$1516/749524318.doWork(Unknown Source)
+	at net.minecraft.world.chunk.ChunkStatus.func_223198_a(ChunkStatus.java:196)
+
+-- Chunk to be generated --
+Details:
+	Location: 8,-42
+	Position hash: -180388626424
+	Generator: net.minecraft.world.gen.OverworldChunkGenerator@43bacb0d
+Stacktrace:
+	at net.minecraft.world.server.ChunkManager.lambda$null$17(ChunkManager.java:509)
+	at net.minecraft.world.server.ChunkManager$$Lambda$3926/931415422.apply(Unknown Source)
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38)
+	at net.minecraft.world.server.ChunkManager.lambda$func_223156_b$19(ChunkManager.java:507)
+	at net.minecraft.world.server.ChunkManager$$Lambda$3911/1651397543.apply(Unknown Source)
+	at java.util.concurrent.CompletableFuture.uniCompose(CompletableFuture.java:952)
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:926)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442)
+	at net.minecraft.world.chunk.ChunkTaskPriorityQueueSorter.func_219083_b(SourceFile:58)
+	at net.minecraft.world.chunk.ChunkTaskPriorityQueueSorter$$Lambda$3924/96207254.run(Unknown Source)
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.func_213148_e(SourceFile:83)
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.func_213145_a(SourceFile:123)
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.run(SourceFile:91)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['NotheOne'/1009, l='New World123', x=476.53, y=113.52, z=-452.15]]
+	Chunk stats: ServerChunkCache: 5516
+	Level dimension: DimensionType{minecraft:overworld}
+	Level name: New World123
+	Level seed: 7573631447423932933
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (192,69,208), Chunk: (at 0,4,0 in 12,13; contains blocks 192,0,208 to 207,255,223), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 3761 game time, 3761 day time
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 88130 (now: false), thunder time: 173151 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:832)
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:764)
+	at net.minecraft.server.integrated.IntegratedServer.func_71217_p(IntegratedServer.java:112)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:622)
+	at java.lang.Thread.run(Thread.java:745)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.14.4
+	Minecraft Version ID: 1.14.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 3558787600 bytes (3393 MB) / 6442450944 bytes (6144 MB) up to 6442450944 bytes (6144 MB)
+	CPUs: 16
+	JVM Flags: 9 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx6G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M
+	ModLauncher: 3.2.0+60+b86c1d4
+	ModLauncher launch target: fmlclient
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/eventbus-0.10.6-service.jar eventbus PLUGINSERVICE 
+		/forge-1.14.4-28.0.49.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.0.49.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-0.16.0-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.14.4-28.0.49.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.14.4-28.0.49.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.14.4-28.0.49.jar fml TRANSFORMATIONSERVICE 
+	FML: 28.0
+	Forge: net.minecraftforge:28.0.49
+	FML Language Providers: 
+		javafml@28.0
+		minecraft@1
+	Mod List: 
+		aerialaffinity-3.0a.jar Aerial Affinity {aerialaffinity@3.0a DONE}
+		anviltweaks-1.3.jar Anvil Tweaks {anviltweaks@1.3 DONE}
+		Apotheosis-1.14.4-2.1.13.jar Apotheosis {apotheosis@2.1.13 DONE}
+		AttributeFix-1.14.4-3.0.2.jar AttributeFix {attributefix@3.0.2 DONE}
+		BetterThanMending-1.3.1.jar BetterThanMending {betterthanmending@1.3.1 DONE}
+		ChunkNoGoByeBye-1.14.4-1.0.2.jar ChunkNoGoByeBye {chunknogobyebye@1.14.4-1.0.2 DONE}
+		Clumps-4.0.0.jar Clumps {clumps@4.0.0 DONE}
+		curioofundying-FORGE-1.14.4-2.0-beta2.jar Curio of Undying {curioofundying@FORGE-1.14.4-2.0-beta2 DONE}
+		curios-FORGE-1.14.4-0.23.jar Curios API {curios@FORGE-1.14.4-0.23 DONE}
+		DungeonCrawl-1.14.4-1.3.0.jar Dungeon Crawl {dungeoncrawl@1.3.0 DONE}
+		EnchantmentDescriptions-1.14.4-1.3.3.jar EnchantmentDescriptions {enchdesc@1.3.3 DONE}
+		exp_bottling-1.14.4-3.jar EXP Bottling {exp_bottling@1.14.4-3 DONE}
+		glassential-forge-1.14.4-1.1.1.jar Glassential {glassential@1.1.1 DONE}
+		Harvest-forge-1.14.4-1.2.10-23.jar Harvest {harvest@version DONE}
+		Hwyla-forge-1.10.5-B66_1.14.4.jar Waila {waila@version DONE}
+		jei-1.14.4-6.0.0.10.jar Just Enough Items {jei@6.0.0.10 DONE}
+		lumberjack-2.0.0.jar LumberJack {lumberjack@2.0.0 DONE}
+		Placebo-1.14.4-2.1.11.jar Placebo {placebo@2.1.11 DONE}
+		SilentLib-1.14.4-4.3.1+39.jar Silent Lib {silentlib@4.3.1+39 DONE}
+		SimpleStorageNetwork-1.14.4-0.0.9.jar Simple Storage Network {storagenetwork@1.14.4-0.0.9 DONE}
+		spiketraps-1.0.jar Spike Traps {spiketraps@1.0 DONE}
+		TorchBandolier-1.14.4-1.3.1+6.jar Torch Bandolier {torchbandolier@1.3.1+6 DONE}
+		torchmaster-2.0.0.6-alpha.jar Torchmaster {torchmaster@2.0.0.6-alpha DONE}
+		TrashSlot_1.14.4-10.4.5.jar TrashSlot {trashslot@10.4.5 DONE}
+		u_team_core-1.14.4-2.7.1.130.jar U Team Core {uteamcore@2.7.1.130 DONE}
+		useful_backpacks-1.14.4-1.7.0.34.jar Useful Backpacks {usefulbackpacks@1.7.0.34 DONE}
+		weapon_craftery-1.14.4-1.0-Beta-3.jar Weapon Craftery {weapon_craftery@1.14.4-1.0-Beta-3 DONE}
+		forge-1.14.4-28.0.49-universal.jar Forge {forge@28.0.49 DONE}
+		forge-1.14.4-28.0.49-client.jar Minecraft {minecraft@1.14.4 DONE}
+	Player Count: 1 / 8; [ServerPlayerEntity['NotheOne'/1009, l='New World123', x=476.53, y=113.52, z=-452.15]]
+	Data Packs: vanilla, mod:weapon_craftery, mod:waila, mod:uteamcore, mod:usefulbackpacks, mod:trashslot, mod:torchmaster, mod:torchbandolier, mod:storagenetwork, mod:spiketraps, mod:silentlib, mod:placebo, mod:lumberjack (incompatible), mod:jei, mod:harvest, mod:glassential, mod:forge, mod:exp_bottling, mod:enchdesc, mod:dungeoncrawl, mod:curios, mod:curioofundying, mod:clumps, mod:chunknogobyebye, mod:betterthanmending, mod:attributefix, mod:apotheosis, mod:anviltweaks, mod:aerialaffinity
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'
